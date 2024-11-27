@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/11.0.0/octicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+  <title>Mortgage repayment calculator</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  <section id="all-section-container">
+  <section id="calculating-section">
+    <div class="header-container">
+      <h1>Mortgage Calculator</h1>
+      <p class="clear-all">Clear all</p>
+  </div>
+ <form>
+  <div class="mortage-div">
+      <label for="mortgage-amount">Mortgage Amount</label>
+      <input type="number" id="mortgage-amount" name="mortgage-amount" required>
+  </div>
+  <div class="rate-interset-div">
+      <div class="label-div"><label for="mortgage-term">Mortgage Term</label>
+        <label for="interest-rate">Interest Rate</label></div>
+      <div class="input-div"> <input type="number" id="mortgage-term" name="mortgage-term" required>
+        <input type="number" id="interest-rate" name="interest-rate" step="0.01" required></div>
+     
+  </div>
+  <div class="checkbox-form">
+    <label for="checkbox">Mortgage type</label>
+    <button class="button-c"><input type="checkbox">Repayment</button>
+    <button class="button-c"><input type="checkbox">interest only</button>
+    
+    <button class="button"><img src="assets/images/icon-calculator.svg" alt="icon for calculater">Calculate Payment</button>
+  </div>
+  
+</section>
+  <!-- Empty results start -->
+  <section id="result-section">
+     <div class="svg">
+      <img src="assets/images/illustration-empty.svg" alt="svg img">
+     </div>
+     <h2>Results shown here</h2>
+     <p class="p-p">Complete the form and click “calculate repayments” to</p>
+      <p class="p-p">see your results here.</p>
+</section>
+</section>
+  <!-- Empty results end -->
+
+  <!-- Completed results start -->
+
+ <!---- Your results
+
+  Your results are shown below based on the information you provided. 
+  To adjust the results, edit the form and click “calculate repayments” again.
+
+  Your monthly repayments
+
+  Total you'll repay over the term
+
+   Completed results end -->
+  
+  
+</body>
+</html>
