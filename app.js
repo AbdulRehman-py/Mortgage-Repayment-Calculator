@@ -12,7 +12,7 @@ const replace_loan_montly = document.querySelector('.shift-load-monthly');
 const button = document.querySelector('.button');
 const section = document.getElementById('final-results');
 const section2 = document.getElementById('result-section');
-const button2 = document.querySelector('.button-c');
+const button2 = document.querySelectorAll('.button-c');
 
 
 function getvalue() {
@@ -109,16 +109,68 @@ function checkBoxes () {
     }
 }
 
+
+
+
+// --------------------------------------
+
+// Add event listeners to checkboxes to ensure only one can be checked at a time
+check_box_repayment.addEventListener('change', () => {
+    if (check_box_repayment.checked) {
+        check_box_interset.checked = false;
+    }
+});
+
+check_box_interset.addEventListener('change', () => {
+    if (check_box_interset.checked) {
+        check_box_repayment.checked = false;
+    }
+});
+
+
+function validateInput() {
+    const { mortage_amount_value, interest_rate_value, loan_years_value } = getvalue();
+    let isvalid = true;
+
+    if (!mortage_amount_value) {
+        mortage_amount.style.border = '1px solid red';
+        isvalid = false;
+    } else {
+        mortage_amount.style.border = '';
+    }
+
+    if (!interest_rate_value) {
+        interest_rate.style.border = '1px solid red';
+        isvalid = false;
+    } else {
+        interest_rate.style.border = '';
+    }
+
+    if (!loan_years_value) {
+        loan_years.style.border = '1px solid red';
+        isvalid = false;
+    }else {
+        loan_years.style.border = '';
+    }
+
+   
+
+    return isvalid;
+}
+
 function buttonClick() {
-    button.addEventListener('click', (e) => {
-       e.preventDefault();
-        section.classList.remove('hide');
-        section2.classList.add('hide2')
-        checkBoxes();
-        console.log('button clicked');
-        
-    });
+   button.addEventListener ('click', (e) => {
+        e.preventDefault();
+        if (validateInput()) {
+            section.classList.remove('hide');
+            section2.classList.add('hide2');
+            checkBoxes();
+        } else  {
+            console.log('Please fill all the fields');
+        }
+   })
 }
 
 buttonClick();
+
 clear_all_fields.addEventListener('click', clearFields);

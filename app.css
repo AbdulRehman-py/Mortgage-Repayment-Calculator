@@ -301,9 +301,10 @@
     cursor: pointer;
     text-decoration: none;
  }
-
+ 
 
 }
+
 
 @layer responsive {
     @media (max-width: 900px) {
@@ -317,6 +318,8 @@
             max-width: 100%;
             
         }
+      
+     
 
          @media (max-width: 900px) {
         *,
@@ -355,4 +358,38 @@
         
     }
     }
+  @media (max-width: 670px) {
+    .header-container {
+      flex-direction: column;
+      align-items: start;
+      margin: 0;
+    }
+    .header-container h1 {
+      margin-bottom: 0;
+    }
+  }
+ 
 }
+ @media (max-width: 470px) {
+   
+   body {
+   
+    display: block;
+    max-width: 100%;
+    font-size: (base-size);
+    
+    
+    
+   }
+    #all-section-container {
+    display: block;
+      
+    }
+  }
+
+  #result-section {
+    text-align: center;
+  }
+  .p-p {
+    text-align: center;
+  }
