@@ -137,7 +137,7 @@
 
     .mortage-div input {
         padding: 0.3rem;
-        border: 1px solid var(--Lime);
+        border: 1px solid var(--base-color);
         border-radius: 3px;
     }
 }
@@ -149,7 +149,7 @@
         margin-bottom: 0.3rem;
     }
     .button-c {
-        border: 1px solid var(--Lime);
+        border: 1px solid var(--base-color);
         text-align: left;
         display: flex;
         background-color: var(--White);
@@ -206,10 +206,153 @@
 
       #interest-rate {
         padding-right: 30px; /* Adjust padding to make space for the icon */
-        border: 1px solid var(--Slate);
+        border: 1px solid var(--base-color);
         
         background-image: url('assets/images/icons8-percentage-22.png');
         background-repeat: no-repeat;
         background-position: right 10px center; /* Position the icon on the right side */
       }
+
+      #mortgage-term {
+        border: 1px solid var(--base-color);
+        outline: none;
+      }
+
+      #interest-rate {
+        border: 1px solid var(--base-color);
+        outline: none;
+      }
+
+      #mortgage-amount {
+        border: 1px solid var(--base-color);
+        outline: none;
+      }
+
+      #final-results {
+       border-radius: 12px;
+       padding: 0.9rem 1.5rem 2rem 1.5rem;
+        outline: none;
+        background-color: var(--dark-slate);
+        width: max-content;
+        font-family: var(--font-style);
+        color: var(--Slate);
+      }
+      #final-results p {
+        margin: 0;
+        margin-bottom: 0.3rem;
+        padding: 0;
+      }
+
+      #final-results h2 {
+        color: var(--White);
+      }
+
+
+      .payment-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 1rem;
+        border: 1px solid var(--Slate);
+        border-radius: 12px;
+        border-top: 5px solid var(--Lime);
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        
+      }
+
+      .payment-div span:nth-child(2) {
+        font-size: var(--h1);
+        color: var(--Lime);
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 1rem;
+        margin-top: 1rem;
+      }
+
+      .payment-div #p1  {
+        margin: 1rem 0 1rem 0;
+      }
+
+      .total-payment {
+        font-size: var(--h2);
+        color: var(--White);
+    
+      }
+}
+
+@layer display-show-hide {
+   
+    .hide {
+        display: none;
+    }
+
+    .hide2 {
+        display: none;
+    }
+      
+
+}
+
+@layer extra_styling {
+ .clear-all {
+    text-decoration: underline;
+ }
+
+ .clear-all:hover {
+    cursor: pointer;
+    text-decoration: none;
+ }
+
+
+}
+
+@layer responsive {
+    @media (max-width: 900px) {
+        *,
+        *::before,
+        *::after {
+            max-width: 100%;
+        }
+
+        #all-section-container {
+            max-width: 100%;
+            
+        }
+
+         @media (max-width: 900px) {
+        *,
+        *::before,
+        *::after {
+            max-width: 100%;
+        }
+
+        #all-section-container {
+            max-width: 100%;
+            width: 100%;
+            
+        }
+
+        .mortage-div input,
+        .rate-interset-div .input-div input {
+            width: 100%;
+        }
+
+        #final-results h2 {
+            
+            font-size: var(--base-size);
+        }
+
+        #final-results {
+            width: 100%;
+            font-size: var(--base-size);
+        }
+
+        .payment-div > span {
+            font-size: var(--base-size);
+        }
+        #final-results p {
+            font-size: var(--small);
+        }
+        
+    }
+    }
 }
