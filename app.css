@@ -1,0 +1,395 @@
+@layer base {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    :root {
+        --base-size: 1rem;
+        --h1: 2rem;
+        --h2: 1.5rem;
+        --small: 0.8rem;
+
+        --base-color: #333;
+        --Lime: hsl(61, 70%, 52%);
+        --Red: hsl(4, 69%, 50%);
+        --White: hsl(0, 0%, 100%);
+        --Slate: hsl(203, 41%, 72%);
+        --dark-slate: hsl(202, 55%, 16%);
+        --font-style: 'Parkinsans', sans-serif;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        font-size: var(--base-size);
+        font-family: var(--font-style);
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--dark-slate);
+        
+       
+    }
+
+
+}
+
+@layer outer-style {
+   #all-section-container {
+     display: flex;
+     width: max-content;
+    border-radius: 12px;
+    border: 1px solid var(--Lime);
+    background-color: var(--White);
+     
+    
+   }
+}
+
+@layer calside {
+    #calculating-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: max-content;
+        border-right: none;
+        background-color: var(--tansparent);
+        padding: 1rem 1rem 1rem 1rem;
+
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mortage-div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0.5rem;
+    }
+
+    .checkbox-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    .rate-interset-div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0.5rem;
+    }
+
+    .label-div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: var(--small);
+    }
+
+    .input-div {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.7rem;
+        align-items: center;
+    }
+}
+
+@layer result-section {
+    #result-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+        border-radius: 12px;
+        background-color: var(--dark-slate);
+        padding: 1rem 1rem 1rem 1rem;
+        color: var(--White);
+        outline: none;
+        border-left: none;
+        
+    }
+
+    #result-section > p {
+        margin: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    #result-section  h2 {
+        margin: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@layer input-styling {
+    .mortage-div label {
+        font-size: var(--small);
+        margin-bottom: 0.3rem;
+    }
+
+    .mortage-div input {
+        padding: 0.3rem;
+        border: 1px solid var(--base-color);
+        border-radius: 3px;
+    }
+}
+
+@layer button {
+
+    .checkbox-form label {
+        font-size: var(--small);
+        margin-bottom: 0.3rem;
+    }
+    .button-c {
+        border: 1px solid var(--base-color);
+        text-align: left;
+        display: flex;
+        background-color: var(--White);
+        padding: 0.2rem;
+        font-size: var(--small);
+        font-family: var(--font-style);
+        margin-bottom: 0.3rem;
+        border-radius: 3px;
+        
+    }
+
+    .button {
+        border: 1px solid var(--Lime);
+        background-color: var(--Lime);
+        border-radius: 15px;
+        width: max-content;
+        padding: 0.7rem 1.5rem;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        font-family: var(--font-style);
+    }
+
+    .button img {
+        margin-right: 0.8rem; /* Adjust the space between the image and text */
+      }
+
+  .label-div > label {
+    margin-top: 0.5rem;
+  }
+
+    .input-div > input {
+        padding: 0.3rem;
+        border: 1px solid var(--Slate);
+        border-radius: 3px;
+        margin-top: 0.4rem;
+    }
+
+    .checkbox-form > label {
+        margin-top: 0.3rem;
+    }
+}
+
+@layer icon {
+    #mortgage-amount {
+        padding-left: 30px; /* Adjust padding to make space for the icon */
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="16" height="16"><path d="M26,21.9V10.5a15.4,15.4,0,0,1,5.2,2.1,2.2,2.2,0,0,0,3.1-.7A1.8,1.8,0,0,0,33.9,9,17.1,17.1,0,0,0,26,6.2V4a2,2,0,0,0-4,0V6c-6.3.5-10.8,4.4-10.8,9.7h0c0,6,4.3,8.4,10.8,10V37.6a16.7,16.7,0,0,1-7.3-3.1,2,2,0,0,0-3,.4c-1,1.3-.9,2.3.1,3A19.8,19.8,0,0,0,22,41.8V44a2,2,0,0,0,4,0V41.9c6.5-.5,11-4.4,11-10h0C37,26.7,33.7,23.7,26,21.9ZM16,15.5h0c0-2.8,2.4-4.8,6-5.1V21C17,19.6,16,17.9,16,15.5ZM32.2,32.3c0,2.9-2.5,5-6.2,5.4v-11c5.1,1.4,6.2,3.1,6.2,5.5Z"/></svg>');
+        background-position: 10px center; /* Position the icon */
+        background-repeat: no-repeat; /* Prevent the icon from repeating */
+        
+      }
+
+      #interest-rate {
+        padding-right: 30px; /* Adjust padding to make space for the icon */
+        border: 1px solid var(--base-color);
+        
+        background-image: url('assets/images/icons8-percentage-22.png');
+        background-repeat: no-repeat;
+        background-position: right 10px center; /* Position the icon on the right side */
+      }
+
+      #mortgage-term {
+        border: 1px solid var(--base-color);
+        outline: none;
+      }
+
+      #interest-rate {
+        border: 1px solid var(--base-color);
+        outline: none;
+      }
+
+      #mortgage-amount {
+        border: 1px solid var(--base-color);
+        outline: none;
+      }
+
+      #final-results {
+       border-radius: 12px;
+       padding: 0.9rem 1.5rem 2rem 1.5rem;
+        outline: none;
+        background-color: var(--dark-slate);
+        width: max-content;
+        font-family: var(--font-style);
+        color: var(--Slate);
+      }
+      #final-results p {
+        margin: 0;
+        margin-bottom: 0.3rem;
+        padding: 0;
+      }
+
+      #final-results h2 {
+        color: var(--White);
+      }
+
+
+      .payment-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 1rem;
+        border: 1px solid var(--Slate);
+        border-radius: 12px;
+        border-top: 5px solid var(--Lime);
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        
+      }
+
+      .payment-div span:nth-child(2) {
+        font-size: var(--h1);
+        color: var(--Lime);
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 1rem;
+        margin-top: 1rem;
+      }
+
+      .payment-div #p1  {
+        margin: 1rem 0 1rem 0;
+      }
+
+      .total-payment {
+        font-size: var(--h2);
+        color: var(--White);
+    
+      }
+}
+
+@layer display-show-hide {
+   
+    .hide {
+        display: none;
+    }
+
+    .hide2 {
+        display: none;
+    }
+      
+
+}
+
+@layer extra_styling {
+ .clear-all {
+    text-decoration: underline;
+ }
+
+ .clear-all:hover {
+    cursor: pointer;
+    text-decoration: none;
+ }
+ 
+
+}
+
+
+@layer responsive {
+    @media (max-width: 900px) {
+        *,
+        *::before,
+        *::after {
+            max-width: 100%;
+        }
+
+        #all-section-container {
+            max-width: 100%;
+            
+        }
+      
+     
+
+         @media (max-width: 900px) {
+        *,
+        *::before,
+        *::after {
+            max-width: 100%;
+        }
+
+        #all-section-container {
+            max-width: 100%;
+            width: 100%;
+            
+        }
+
+        .mortage-div input,
+        .rate-interset-div .input-div input {
+            width: 100%;
+        }
+
+        #final-results h2 {
+            
+            font-size: var(--base-size);
+        }
+
+        #final-results {
+            width: 100%;
+            font-size: var(--base-size);
+        }
+
+        .payment-div > span {
+            font-size: var(--base-size);
+        }
+        #final-results p {
+            font-size: var(--small);
+        }
+        
+    }
+    }
+  @media (max-width: 670px) {
+    .header-container {
+      flex-direction: column;
+      align-items: start;
+      margin: 0;
+    }
+    .header-container h1 {
+      margin-bottom: 0;
+    }
+  }
+ 
+}
+ @media (max-width: 470px) {
+   
+   body {
+   
+    display: block;
+    max-width: 100%;
+    font-size: (base-size);
+    
+    
+    
+   }
+    #all-section-container {
+    display: block;
+      
+    }
+  }
+
+  #result-section {
+    text-align: center;
+  }
+  .p-p {
+    text-align: center;
+  }
