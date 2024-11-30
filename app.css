@@ -350,8 +350,11 @@
   
       .mortage-div input,
       .rate-interset-div .input-div input {
+        max-width: 100%;
         width: 100%;
       }
+
+    
     }
   @media (max-width: 670px) {
     .header-container {
