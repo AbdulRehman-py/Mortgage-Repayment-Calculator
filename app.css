@@ -307,37 +307,18 @@
 
 
 @layer responsive {
-    @media (max-width: 900px) {
-        *,
-        *::before,
-        *::after {
-            max-width: 100%;
-        }
-
-        #all-section-container {
-            max-width: 100%;
-            
-        }
-      
-     
-
+    
          @media (max-width: 900px) {
-        *,
-        *::before,
-        *::after {
-            max-width: 100%;
-        }
-
-        #all-section-container {
+       
+          
+      
+          #all-section-container {
             max-width: 100%;
             width: 100%;
-            
-        }
-
-        .mortage-div input,
-        .rate-interset-div .input-div input {
-            width: 100%;
-        }
+            overflow: hidden;
+          }
+      
+         
 
         #final-results h2 {
             
@@ -358,6 +339,20 @@
         
     }
     }
+
+
+    @media (max-width: 800px) {
+      .mortage-div,
+      .rate-interset-div .input-div {
+        max-width: 100%;
+        width: 100%;
+      }
+  
+      .mortage-div input,
+      .rate-interset-div .input-div input {
+        width: 100%;
+      }
+    }
   @media (max-width: 670px) {
     .header-container {
       flex-direction: column;
@@ -369,8 +364,8 @@
     }
   }
  
-}
- @media (max-width: 470px) {
+
+ @media (max-width: 500px) {
    
    body {
    
