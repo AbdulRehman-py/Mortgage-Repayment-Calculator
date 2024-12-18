@@ -369,20 +369,39 @@
  
 
  @media (max-width: 500px) {
-   
-   body {
-   
-    display: block;
+  body {
+  display: block;
+    width: 100%;
     max-width: 100%;
-    font-size: (base-size);
-    
-    
-    
+    height: 100vh;
+    overflow: auto;
    }
+   
+  
     #all-section-container {
-    display: block;
-      
+    
+   display: flex;
+   flex-direction: column;
+    width: 100%;
+    max-width: 100%;
     }
+
+    #result-section {
+      font-size: var(--small);
+      width: 100%;
+      max-width: 100%;
+    }
+
+   #calculating-section {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem 1rem 1rem 1rem;
+   }
+
+   #final-result {
+    width: 100%;
+    max-width: 100%;
+   }
   }
 
   #result-section {
@@ -474,4 +493,9 @@
     .round input[type="checkbox"]:checked + span {
       color: #66bb6a;
     }
+  }
+
+
+  @media (max-width: 450px) {
+
   }
